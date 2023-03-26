@@ -26,51 +26,48 @@
 
 <<<
 
-[#purpose]
-== Purpose
+[#目的]
+== 目的
 
-The manual instructs how to install and execute the RoboCup Rescue Simulation Agent Development Framework (ADF) Sample Agents, and how to implement a new team of agents using the ADF Sample Agents.
+该手册指导如何安装和执行RoboCup救援模拟代理开发框架(ADF)样本代理，以及如何使用ADF样本代理实现一个新的代理团队。
 
-[#installation]
-== Installation
+[#安装]
+== 安装
 
-This manual assumes the agents will run in a Linux machine even though it is possible to run them in Microsoft Windows or Apple macOS.
-We recommend to use Linux because it is open-source and most of the distributions have a good support from the users' community.
-If you have never used Linux before and intend to, we recommend starting with a user-friendly distribution, such as https://www.ubuntu.com/[Ubuntu] or https://getfedora.org[Fedora].
-[#requirements]
-=== Software Requirements
+本手册假设代理将在Linux机器上运行，即使可以在Microsoft Windows或Apple macOS上运行它们。 我们推荐使用Linux，因为它是开源的，而且大多数发行版都得到了用户社区的良好支持。 如果您以前从未使用过Linux，但打算使用，我们建议您从用户友好的发行版开始， 例如https://www.ubuntu.com[Ubuntu]或https://getfedora.org[Fedora]。
+
+[#需求]
+=== 软件需求
 
 * Git
 * OpenJDK Java 17
 * Gradle
 * Utilities like `wget`, `bash`, `xterm`, `tar`, `gzip`, etc. +
-**NOTE:** If you are using Ubuntu, all of these utilities are present in the default software repositories.
+**NOTE:** 如果你使用的是Ubuntu，所有这些工具都在默认的软件库中。
 
-[#download]
-=== Download
+[#下载]
+=== 下载
 
-You can download the sample agents with ADF by cloning the `https://github.com/roborescue/adf-sample-agent-java` repository.
-Clone this repository using the command
+您可以通过克隆存储库`https://github.com/roborescue/adf-sample-agent-java`来下载带有ADF的样例代理。使用命令克隆此存储库
 [source,shell]
 
 ----
 git clone https://github.com/roborescue/adf-sample-agent-java.git
 ----
 
-[#directories]
-=== Directories
+[#目录]
+=== 目录
 
-The `adf-sample-agent-java` contains multiple directories.
-The important directories are:
+“adf-sample-agent-java”包含多个目录。重要的目录有:
 
-* `config/`: ADF and Agent Modules' configuration files
-* `src/`: Sample agents' source codes
-* `precomp_data`: results of a precomputation for each type of agents
+* `config/`: ADF和Agent模块的配置文件
+* `src/`: 样本代理的源代码
+* `precomp_data`: 每种代理类型的预计算结果
 
-[#compiling]
-=== Compiling
+[#编译]
+=== 编译
 
-Execute the steps below to compile the ADF Sample Agent.
+执行下面的步骤来编译ADF示例代理。
 
 [source,shell]
 ----
@@ -78,19 +75,17 @@ $ cd adf-sample-agent-java
 $ ./gradlew clean build
 ----
 
-[#running]
-== Running
+[#运行]
+== 运行
 
-There are two modes of execution of the simulation server and ADF Sample Agent: *Precomputation* and *Normal*.
+仿真服务器和ADF样例代理有两种执行模式: *Precomputation预计算* 和 *Normal普通*.
 
-[#precomputation_mode]
-=== Precomputation Mode
+[#预计算模式]
+=== 预计算模式
 
-In the precomputation mode, the simulator connects one agent of each type and allows them to write the computation results persistently.
-
-The sequence of commands to run the simulation server in precomputation mode are:
-
+在预计算模式下，模拟器连接每种类型的一个代理，并允许它们持久地写入计算结果。 在预计算模式下运行模拟服务器的命令顺序如下:
 [source,shell]
+
 ----
 $ cd rcrs-server
 $ cd scripts
